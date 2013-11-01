@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B04230C5-DCE9-4CC8-B5D5-B79617651BD2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OctoPart.Net</RootNamespace>
+    <AssemblyName>OctoPart.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.104.3.3\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arguments\APIArguments.cs" />
+    <Compile Include="OctopartManager.cs" />
+    <Compile Include="Converters\EndPointSerializer.cs" />
+    <Compile Include="Converters\JsonCreationConverter.cs" />
+    <Compile Include="Converters\QValueJsonConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Arguments\UniversalAPIArguments.cs" />
+    <Compile Include="Types\AbstractQValue.cs" />
+    <Compile Include="Types\Asset.cs" />
+    <Compile Include="Types\Attribution.cs" />
+    <Compile Include="Types\Brand.cs" />
+    <Compile Include="Types\Category.cs" />
+    <Compile Include="Types\ComplianceDocument.cs" />
+    <Compile Include="Types\Datasheet.cs" />
+    <Compile Include="Types\Description.cs" />
+    <Compile Include="Types\EDAResource.cs" />
+    <Compile Include="Types\Endpoint.cs" />
+    <Compile Include="Types\ExternalLinks.cs" />
+    <Compile Include="Types\GetMulti.cs" />
+    <Compile Include="Types\ImageSet.cs" />
+    <Compile Include="Types\Manufacturer.cs" />
+    <Compile Include="Types\Metadata.cs" />
+    <Compile Include="Types\Part.cs" />
+    <Compile Include="Types\PartOffer.cs" />
+    <Compile Include="Types\PartsMatchQuery.cs" />
+    <Compile Include="Types\PartsMatchRequest.cs" />
+    <Compile Include="Types\PartsMatchResponse.cs" />
+    <Compile Include="Types\PartsMatchResult.cs" />
+    <Compile Include="Types\QualitativeValue.cs" />
+    <Compile Include="Types\QuantitativeValue.cs" />
+    <Compile Include="Types\SearchRequest.cs" />
+    <Compile Include="Types\SearchResponse.cs" />
+    <Compile Include="Types\SearchResult.cs" />
+    <Compile Include="Types\Seller.cs" />
+    <Compile Include="Types\Source.cs" />
+    <Compile Include="Types\UnitOfMeasurement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APIOptions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
